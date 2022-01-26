@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title of Tab -->
+    <title>Page Title</title>
+    <!--
+    62010356 นายธนพล วงศ์อาษา
+    62010694 นายภากรณ์ ธนประชานนท์
+    62010710 นายภูดินันท์ เพ็ญสุข
+    62010713 นายภูฟ้า จันทรพัฒน์
+    62010948 นายสิรวิชญ์ สุขวัฒนาวิทย์
+    -->
+    <style>
+      body {
+        background-color: rgba(255, 255, 240);
+      }
+      .bigheader {
+        color: rgb(0, 191, 255);
+        background-color: rgba(245, 222, 179);
+        text-align: center;
+        padding: 10px;
+      }
+      .sheader {
+        color: rgb(70, 130, 180);
+        text-align: center;
+      }
+      .reporter {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+      }
+      .report-fig {
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      /* Main Part */
+      .fc {
+        display: flex;
+      }
+      /* Left */
+      .menu {
+        flex: 1;
+        font-weight: bold;
+        background-color: rgb(255, 248, 220);
+      }
+      /* Component Left */
+      ul {
+        list-style: none;
+        line-height: 200%;
+      }
+      li {
+        background-color: rgb(255, 218, 185);
+        margin: 10px;
+        padding-left: 20px;
+        padding-right: 60px;
+      }
+      li:hover {
+        background-color: rgb(0, 191, 255);
+      }
+      li:hover a {
+        font-weight: bold;
+        color: yellow;
+      }
+      li a {
+        text-decoration: none;
+        color: blue;
+      }
+      /* Right */
+      .s1 {
+        flex: 5;
+      }
+      /* Component Right */
+      .back {
+        text-align: right;
+      }
+
+      /* Footer */
+      footer {
+        position: sticky;
+        color: rgb(114, 241, 241);
+        text-align: center;
+        bottom: 0px;
+        background-color: rgba(245, 222, 179);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Topic 1 -->
+    <header class="bigheader">
+      <h1>SW Studio TODAY</h1>
+    </header>
+
+    <!-- Topic 2 -->
+    <header class="sheader">
+      <h2>A little exercise of Cascading Style Sheets level3</h2>
+    </header>
+
+    <!-- Flex 5 members -->
+    <div class="reporter">
+      <img
+        class="report-fig"
+        src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/203655269_1764172090456083_102572244103419578_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=BXwtJ96Otp4AX8FLrdX&tn=Nz1_j9ztEWvTxhdA&_nc_ht=scontent.fbkk5-5.fna&oh=00_AT8QaX4K5QCcI-Et0ypVtqZH8xApkET88EQhTLyIrwPqew&oe=62158DA1"
+        alt="picture"
+        width="150"
+      />
+
+      <div>
+        Reported by <br />
+        Mr. Tanapol Wong-asa<br />
+        (Korn)<br />
+        ID 62010356<br />
+        <br />
+        <time datetime="2022-01-26">Jan 26, 2022</time>
+      </div>
+
+      <img
+        class="report-fig"
+        src="https://avatars.githubusercontent.com/u/77424125?v=4"
+        alt="picture"
+        width="150"
+      />
+
+      <div>
+        Reported by <br />
+        Mr. Pakorn Thanaprachanon<br />
+        (Tree)<br />
+        ID 62010694<br />
+        <br />
+        <time datetime="2022-01-26">Jan 26, 2022</time>
+      </div>
+
+      <img
+        class="report-fig"
+        src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.6435-9/118185323_3442044732530075_3879506421721647183_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=GnUEj8tuKn0AX_OZKjl&_nc_ht=scontent.fbkk5-3.fna&oh=00_AT_GLFi7HQyS6WDn25zCLyzfPP8EZu51Ux4JTvXx77NEGw&oe=621800E1"
+        alt="picture"
+        width="150"
+      />
+      <div>
+        Reported by <br />
+        Mr. Pudinan Pensuk<br />
+        (Gut)<br />
+        ID 62010710<br />
+        <br />
+        <time datetime="2022-01-26">Jan 26, 2022</time>
+      </div>
+
+      <img
+        class="report-fig"
+        src="https://avatars.githubusercontent.com/u/63010510?v=4"
+        alt="picture"
+        width="150"
+      />
+      <div>
+        Reported by <br />
+        Mr. Pufa Chantarapatana<br />
+        (Pufa)<br />
+        ID 62010713<br />
+        <br />
+        <time datetime="2022-01-26">Jan 26, 2022</time>
+      </div>
+
+      <img
+        class="report-fig"
+        src="https://avatars.githubusercontent.com/u/56272903?v=4"
+        alt="picture"
+        width="150"
+      />
+      <div>
+        Reported by <br />
+        Mr. Sirawit Sukwattanavit<br />
+        (Pop)<br />
+        ID 62010948<br />
+        <br />
+        <time datetime="2022-01-26">Jan 26, 2022</time>
+      </div>
+    </div>
+
+    <!-- Contents -->
+    <div class="fc">
+      <div class="menu">
+        <h3 id="contents">Contents</h3>
+        <ul>
+          <li><a href="#1">Introduction</a></li>
+          <li><a href="#2">Exercises</a></li>
+          <li><a href="#3">Conclusion</a></li>
+        </ul>
+      </div>
+
+      <!-- big section 1 -->
+      <div class="s1">
+        <!-- section 1 -->
+        <h2 id="1">Introduction</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          eget odio nibh. Sed urna ex, rutrum sed dapibus a, mollis sit amet
+          neque. Morbi tellus orci, viverra et dolor vel, viverra iaculis justo.
+          Ut sed ex sagittis, mattis enim id, suscipit elit. In orci massa,
+          aliquam eu commodo eleifend, consequat sit amet elit. Proin at finibus
+          nisi. Sed sollicitudin, magna a malesuada ornare, dolor turpis commodo
+          ante, eget consequat tortor lectus vitae lacus. Donec sapien sapien,
+          interdum eget arcu et, venenatis dignissim ante. Nulla ut ligula
+          purus. Nulla dapibus sem enim, in lobortis magna vestibulum eu. Duis
+          ultrices elementum nisi, facilisis sagittis ipsum. Curabitur tempor
+          ultricies odio, nec sagittis lacus feugiat feugiat.
+        </p>
+
+        <p>
+          Nunc a elementum augue. Nulla mattis feugiat ligula, eu pharetra nisi
+          tempor id. Vestibulum molestie purus in neque consequat, id fermentum
+          lorem luctus. Cras convallis posuere mauris, vel lobortis mauris
+          volutpat a. Donec scelerisque, risus ut gravida luctus, odio libero
+          lobortis mi, a tempor neque lorem eu nunc. Maecenas commodo lorem
+          pellentesque quam venenatis aliquet. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Pellentesque elementum venenatis quam,
+          eget cursus justo porta in.
+        </p>
+
+        <p>
+          Quisque lacus metus, vehicula vitae nisi id, egestas tincidunt erat.
+          Quisque a ultrices neque. Fusce fermentum laoreet ornare. Donec
+          pellentesque orci eget vestibulum dictum. Morbi ac semper erat, non
+          rutrum odio. Aliquam interdum rutrum quam nec placerat. Praesent et
+          urna imperdiet, pharetra dui ut, accumsan magna. Donec non dignissim
+          libero. Quisque at commodo ex, et porttitor turpis. Sed in sem
+          egestas, vehicula massa ut, laoreet risus. Sed vehicula mattis
+          ullamcorper. In feugiat tortor nisl, nec placerat augue maximus sed.
+          Proin aliquam ac dui ut commodo.
+        </p>
+        <div class="back">
+          <a class="back" href="#contents">back to Contents</a>
+        </div>
+
+        <!-- section 2 -->
+        <h2 id="2">Exercises</h2>
+        <img
+          class="id2"
+          src="https://image.shutterstock.com/image-photo/oh-no-three-frustrated-young-600w-345947564.jpg"
+          alt="oh no"
+        />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          nunc ante, facilisis ac leo quis, tempus faucibus velit. Nulla
+          facilisi. Duis aliquet purus nunc, id malesuada mauris blandit
+          imperdiet. Praesent urna sem, eleifend mattis volutpat vitae,
+          ullamcorper sed est. Suspendisse potenti. Suspendisse malesuada sed ex
+          non vestibulum. In ornare bibendum lacus nec egestas. Donec faucibus
+          turpis id tincidunt blandit. Curabitur imperdiet justo ligula. Nunc
+          malesuada pretium scelerisque. Praesent quis pulvinar massa. Curabitur
+          molestie elementum erat ut suscipit.
+        </p>
+
+        <p>
+          Aenean pharetra urna enim, ut iaculis massa vulputate vel. Interdum et
+          malesuada fames ac ante ipsum primis in faucibus. Vivamus ut neque
+          dolor. Morbi et quam non lorem condimentum mollis. Curabitur commodo
+          arcu et ligula euismod, a porta nulla sagittis. Cras feugiat nulla
+          eget magna vehicula condimentum. Etiam vestibulum dignissim sem vitae
+          vulputate. Vestibulum interdum augue et dignissim lacinia. Suspendisse
+          viverra turpis sit amet maximus gravida. Nullam sit amet nunc arcu.
+          Morbi ornare convallis maximus. Maecenas non mollis sem, vel fermentum
+          sem.
+        </p>
+
+        <p>
+          Aenean ut lectus fringilla enim finibus dictum. In erat ligula,
+          gravida ut ante eget, condimentum porta orci. Aliquam vitae nulla eu
+          libero placerat finibus. Fusce vitae quam risus. Suspendisse potenti.
+          Sed lobortis pharetra nunc sed lacinia. Duis ex nibh, semper eget
+          egestas et, imperdiet vel odio. Proin diam quam, condimentum non dui
+          vel, lacinia ultricies odio. Curabitur semper rutrum lacus pretium
+          fringilla. Morbi leo orci, imperdiet non mi placerat, suscipit
+          lobortis ligula. Proin at nisl non elit rutrum malesuada sed at leo.
+          Etiam maximus, dui in vulputate iaculis, ante leo condimentum urna,
+          mollis gravida nulla sapien id metus. Aenean in lectus mollis,
+          placerat tellus cursus, pulvinar nunc. Curabitur elementum semper est
+          id congue. Orci varius natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus.
+        </p>
+        <div class="back">
+          <a class="back" href="#contents">back to Contents</a>
+        </div>
+
+        <!-- section 3 -->
+        <h2 id="3">Conclusion</h2>
+        <p>
+          Nullam in metus nisl. Sed blandit aliquam dolor in pretium.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Nulla tempor erat eget massa posuere
+          facilisis. Morbi cursus fringilla arcu et dictum. Phasellus malesuada
+          urna eget ex viverra, sed porta velit gravida. Nunc fringilla sem a
+          est suscipit euismod. Duis vitae risus id mi interdum luctus vel sed
+          nibh. Donec sed tellus lacinia, gravida metus quis, ultricies magna.
+          Integer lacus felis, posuere et ex eu, feugiat cursus nisi. Nam
+          ullamcorper dolor et eros dictum, eget pulvinar odio mollis. Nulla
+          bibendum arcu tincidunt tellus malesuada pretium. Class aptent taciti
+          sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos.
+        </p>
+
+        <p>
+          Integer consequat, diam quis convallis volutpat, magna mauris blandit
+          libero, ac finibus ligula ante at odio. Vivamus sit amet metus arcu.
+          Integer non faucibus massa, eget ornare dui. Morbi sed enim lacinia,
+          iaculis elit blandit, aliquet libero. Quisque a arcu metus. Donec quam
+          purus, gravida faucibus sem vitae, ornare feugiat lectus. Nam purus
+          tellus, suscipit ac libero sit amet, dapibus aliquet dui. Suspendisse
+          potenti. Sed lacinia magna et elit rutrum porta. Pellentesque interdum
+          eros sit amet accumsan tempor. Nulla non venenatis velit.
+        </p>
+
+        <div class="back">
+          <a class="back" href="#contents">back to Contents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Sticky -->
+    <footer>ce.kmitl all rights reserved & copyright 2020</footer>
+  </body>
+</html>
