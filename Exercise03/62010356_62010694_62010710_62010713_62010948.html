@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+        62010356 นายธนพล วงศ์อาษา
+        62010694 ภากรณ์ ธนประชานนท์
+        62010710 ภูดินันท์ เพ็ญสุข
+        62010713 ภูฟ้า จันทรพัฒน์
+        62010948 สิรวิชญ์ สุขวัฒนาวิทย์
+    -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Import bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Navigation Bar Begin-->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style>
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-size: 25px;
+      }
+      .nav-item {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        border: 1px;
+        display: inline-block;
+        text-decoration: none;
+      }
+      .nav-item::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width 0.3s;
+      }
+      .nav-item:hover::after {
+        width: 100%;
+      }
+    </style>
+    <!-- Navigation Bar End-->
+    <!-- Banner Picture Begin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .banner-image {
+        background-image: url("https://images4.alphacoders.com/932/932271.jpg");
+        background-size: cover;
+        font-family: "Playfair Display", serif;
+        font-size: 80px;
+        font-weight: 600;
+      }
+      .header-font {
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        font-weight: 600;
+      }
+      .header-title {
+        font-family: "Playfair Display", serif;
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+        .section-about{
+          margin-bottom: 40px;
+        }
+        .section-about .divider {
+          height: 4px;
+          width:70px;
+          background: linear-gradient(to right,#3be02c, rgb(27, 110, 19));
+          margin: 16px auto;
+        }
+        .about-img{
+          width: 100%;
+        }
+        .service .service-img .icon {
+          width: 90px;
+          height: 90px;
+          background: linear-gradient(to right,#e5ffcf, rgb(111, 253, 55));
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 36;
+          position: absolute;
+          bottom: 200px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+    </style>
+
+    <!-- Banner Picture End -->
+
+    <title>Tomorrow Magazine</title>
+  </head>
+  <body class="bg-light">
+    <!-- Navigation Bar Begin -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">Tomorrow Magazine</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon border"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#breaking">Breaking News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#trending">Trending</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  All Contents
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#content1">Bootstrap 5</a>
+                  <a class="dropdown-item" href="#content3">Elon's Doge</a>
+                  <a class="dropdown-item" href="#content2">Quantum computer</a>
+                  <a class="dropdown-item" href="#content5">IPhone 13?</a>
+                  <a class="dropdown-item" href="#content4">Tony Stonk</a>
+                </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                style="cursor: pointer"
+                data-toggle="modal"
+                data-target="#subscribeModal"
+                >Subscribe</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation Bar End -->
+    <!-- Banner Image Begin -->
+    <div
+      class="banner-image w-100 vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="content text-center">
+        <div class="text-white">Tomorrow Magazine</div>
+        <div
+          class="text-white font-weight-light"
+          style="font-family: 'Roboto', sans-serif; font-size: 25px"
+        >
+          World's #1 modern technology magazine
+        </div>
+      </div>
+      <div
+        class="text-white font-weight-light text-center nav-item"
+        style="
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+          position: absolute;
+          bottom: 30px;
+        "
+      >
+        <a class="text-white" href="#breaking" style="text-decoration: none;">Go to content <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <!-- Banner Image End -->
+
+    <div class="container">
+
+        <!-- Korn Content -->
+        <div id="breaking" class="py-5"></div>
+        <h2 class="header-font">Breaking news</h2>
+        <div id="content1" class="card bg-white mb-3">
+            <div class="card-body row">
+              <div class="col-sm-12 col-md-5 d-flex flex-column pt-4">
+                <img
+                  src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-social.png"
+                  alt="Bootstrap 5"
+                  class="card-img rounded pb-4"
+                />
+      
+              </div>
+              <div class="col-sm-12 col-md-7 p-4 d-flex flex-column justify-content-between">
+                <div>
+                  <h1 class="card-title header-title">Bootstrap release version 5</h1>
+                  <h4 class="card-text font-weight-light">
+                    Mr. John Cena
+                  </h4>
+                </div>
+  
+                <div>
+                  <p>
+                    &emsp; Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.  <span id="dots2">...</span>
+                    <a
+                      data-toggle="collapse"
+                      href="#expandcontent2"
+                      role="button"
+                      id="readMore2"
+                      aria-expanded="false"
+                      aria-controls="expandcontent2"
+                      onclick="toggleReadMore('readMore2','dots2')"
+                    >
+                      continue reading
+                    </a>
+                    <!-- hide content -->
+                    <div class="collapse" id="expandcontent2">
+                      <p>
+                        &emsp;Bootstrap 5 (the current major version, released in May 2021) has brought with it tons of changes and improvements, including the addition of new components, new classes, new styling for old components, updated browser support, the removal of some old components, and much more.
+                      </p>
+                      <p>
+                        &emsp;Bootstrap 5 brings core changes to Bootstrap as a library, with a change in required dependencies, browser support and more. It also brings changes to the components and classes that we’ve always used in previous versions.           
+                        <a
+                        data-toggle="collapse"
+                        href="#expandcontent2"
+                        role="button"
+                        id="readMore2"
+                        aria-expanded="false"
+                        aria-controls="expandcontent2"
+                        onclick="toggleReadMore('readMore2','dots2')"
+                      >
+                        [ hide ]
+                      </a>
+                      </p>
+                    </div>
+                  </p>
+                </div>
+  
+                <div>
+                  Tag:
+                  <button class="btn btn-warning btn-sm">Breaking News</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Tree -->
+          <div id="content3" class="card bg-white">
+            <div class="card-body row">
+              <div class="col-sm-12 col-md-5 d-flex flex-column pt-5">
+                <img
+                  src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202105/dog_1.jpg?E1LENmMq1JqjhwopgaC_lE8pISHca3DV&size=770:433"
+                  alt="Bootstrap 5"
+                  class="card-img rounded pb-4"
+                />
+      
+              </div>
+              <div class="col-sm-12 col-md-7 p-4 d-flex flex-column justify-content-between">
+                <div>
+                  <h1 class="card-title header-title">Elon Musk is literally sending Dogecoin to the moon</h1>
+                  <h4 class="card-text font-weight-light">
+                    Mr. Joe Bye-then
+                  </h4>
+                </div>
+  
+                <div>
+                  <p>
+                    &emsp; On April 1, Elon Musk had tweeted - SpaceX is going to put a literal Dogecoin on the literal moon. The tweet led to a surge in Dogecoin price and it has pretty much been ruling the internet since then. Yet, no one would have expected Musk to actually do that. And, here we are. <span id="dots3">...</span>
+                    <a
+                      data-toggle="collapse"
+                      href="#expandcontent3"
+                      role="button"
+                      id="readMore3"
+                      aria-expanded="false"
+                      aria-controls="expandcontent3"
+                      onclick="toggleReadMore('readMore3','dots3')"
+                    >
+                      continue reading
+                    </a>
+                    <!-- hide content -->
+                    <div class="collapse" id="expandcontent3">
+                      <p>
+                        &emsp;Musk tweeted that company’s new satellite will be called Doge-1. Not just this, in an unprecedented move, the entire mission will be paid for in Dogecoin. This will make Doge the first crypto in space. Ironically, it will also be the first meme in space.
+                      </p>
+                      <p>
+                        &emsp;“SpaceX launching satellite Doge-1 to the moon next year. Mission paid for in Doge. 1st crypto in space. 1st meme in space. To the mooooonnn!!” Musk tweeted, a day after his Saturday Night Live appearance which saw the crypto crash. Dogecoin had lost one third of its price while Musk on SNL as he called it a hustle.
+                      </p>
+                      <p>
+                        &emsp;Geometric Energy Corporation gave further information about the space mission through an official statement on Sunday.
+                      </p>
+                      <p>
+                        &emsp;"This mission will demonstrate the application of cryptocurrency beyond Earth orbit and set the foundation for interplanetary commerce", SpaceX Vice President of Commercial Sales Tom Ochinero was quoted as saying in the statement released by Geometric Energy.
+                      </p>
+                      <p>
+                        &emsp;The statement adds that Dogecoin is “sophisticated enough to finance a commercial Moon mission in full” and that it’ll be used for all lunar business between the two companies.
+                      </p>
+                      <p>
+                        &emsp;Despite all the good news and hype around it, Dogecoin has had a tough week. Its price has been fluctuating for different reasons but Elon Musk has been at the centre of all. Overall, the crypto has given almost 10,000 per cent returns this month and recovered late Sunday evening after a dramatic fall on Saturday after Musk’s SNL performance.
+                      </p>
+                      <p>
+                        &emsp;While the new space mission sounds exciting, it will be interesting to see how effective it is. Also, time will tell if sending Doge-1 to the moon will also send Dogecoin to the moon or not. The phrase has become increasingly popular among investor. To recall, Dogecoin started as meme currency and probably, Musk has taken the joke too far.        
+                        <a
+                        data-toggle="collapse"
+                        href="#expandcontent3"
+                        role="button"
+                        id="readMore3"
+                        aria-expanded="false"
+                        aria-controls="expandcontent3"
+                        onclick="toggleReadMore('readMore3','dots3')"
+                      >
+                        [ hide ]
+                      </a>
+                      </p>
+                    </div>
+                  </p>
+                </div>
+  
+                <div>
+                  Tag:
+                  <button class="btn btn-warning btn-sm">Breaking News</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        <!-- Pop Content -->
+        <!-- this is for nav space-->
+        <div id="trending" class="py-5"></div>
+        <h2 class="header-font">Trending news</h2>
+
+        <div id="content2" class="card bg-white mb-3">
+          <div class="card-body row">
+            <div class="col-sm-12 col-md-5 d-flex flex-column pt-4">
+              <img
+                src="https://i.ytimg.com/vi/LRUXDylSY5Q/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPFve45x1D1uowhTHFpUuTtXq1CA"
+                alt="dr.Kawaschy image"
+                class="card-img rounded pb-4"
+              />
+              <figure style="display: inline-block">
+                <img
+                src="https://ichef.bbci.co.uk/news/976/cpsprodpb/D096/production/_121589335_quantum20summit_hero20and20carousel20template_1920x720.jpg"
+                alt="detail image"
+                class="card-img rounded collapse pb-2"
+                id="expandcontent1"
+              />
+              <figcaption style="text-align: center" class="collapse" id="expandcontent1">Quantum computer by NVIDIA</figcaption>
+            </figure>
+            </div>
+            <div class="col-sm-12 col-md-7 p-4 d-flex flex-column justify-content-between">
+              <div>
+                <h1 class="card-title header-title">Quantum Computer</h1>
+                <h4 class="card-text font-weight-light">
+                  Dr. Kawaschy Jakkarin
+                </h4>
+                <p>
+                  &emsp; Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                  diam eget eget egestas dolor. Diam neque enim arcu, hac. Quam
+                  venenatis curabitur hendrerit quam turpis fringilla ultricies
+                  tortor est <span id="dots1">...</span>
+                  <a
+                    data-toggle="collapse"
+                    href="#expandcontent1"
+                    role="button"
+                    id="readMore1"
+                    aria-expanded="false"
+                    aria-controls="expandcontent1"
+                    onclick="toggleReadMore('readMore1','dots1')"
+                  >
+                    continue reading
+                  </a>
+                  <!-- hide content -->
+                  <div class="collapse" id="expandcontent1">
+                    <p>
+                      &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                      diam eget eget egestas dolor. Diam neque enim arcu, hac.
+                      Quam venenatis curabitur hendrerit quam turpis fringilla
+                      ultricies tortor est Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. Semper amet nunc, consequat,
+                      amet sem. Vel venenatis diam eget eget egestas dolor.
+                    </p>
+                    <p>
+                      &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                      diam eget eget egestas dolor. Diam neque enim arcu, hac.
+                      Quam venenatis curabitur hendrerit quam turpis fringilla
+                      ultricies tortor est Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. Semper amet nunc, consequat,
+                      amet sem. Vel venenatis diam eget eget egestas dolor. Diam
+                      neque enim arcu, hac. Quam venenatis curabitur hendrerit
+                      quam turpis fringilla ultricies tortor est Lorem ipsum
+                      dolor sit amet, consectetur adipiscing elit. Semper amet
+                      nunc, consequat, amet sem. Vel venenatis diam eget eget
+                      egestas dolor. Diam neque enim arcu, hac. Quam venenatis
+                      curabitur hendrerit quam turpis fringilla ultricies tortor
+                      est              
+                      <a
+                      data-toggle="collapse"
+                      href="#expandcontent1"
+                      role="button"
+                      id="readMore1"
+                      aria-expanded="false"
+                      aria-controls="expandcontent1"
+                      onclick="toggleReadMore('readMore1','dots1')"
+                    >
+                      [ hide ]
+                    </a>
+                    </p>
+                  </div>
+                </p>
+              </div>
+
+              <div>
+                Tag:
+                <button class="btn btn-primary btn-sm">Trending</button>
+                <button class="btn btn-danger btn-sm">Hot News</button>
+                <button class="btn btn-success btn-sm">Tomorrow talk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content5" class="card bg-white mb-3">
+            <div class="card-body row">
+              <div class="col-sm-12 col-md-5 d-flex flex-column pt-4">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-og-2021?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1630076508000"
+                  alt="IPhone 13"
+                  class="card-img rounded pb-4"
+                />
+      
+              </div>
+              <div class="col-sm-12 col-md-7 p-4 d-flex flex-column justify-content-between">
+                <div>
+                  <h1 class="card-title header-title">Apple IPhone 13, is it worth?</h1>
+                  <h4 class="card-text font-weight-light">
+                    Dr. Red Dodee
+                  </h4>
+                </div>
+  
+                <div>
+                  <p>
+                    &emsp; A few months ago, Tim Cook has announced Apple's newest mobile phone, IPhone 13. There are a lot of debate about wether the phone was good or not according to it's price and specification.  <span id="dots5">...</span>
+                    <a
+                      data-toggle="collapse"
+                      href="#expandcontent5"
+                      role="button"
+                      id="readMore5"
+                      aria-expanded="false"
+                      aria-controls="expandcontent5"
+                      onclick="toggleReadMore('readMore5','dots5')"
+                    >
+                      continue reading
+                    </a>
+                    <!-- hide content -->
+                    <div class="collapse" id="expandcontent5">
+                      <p>
+                        &emsp;We were inteviewing the Apple loyalist, Mrs. Ying Kujai, who was using the Apple product since release of IPhone 1 in year 2007. She has given tons and tons of positive review to us as we could expect from the loyalist. "Apple is the best in mobile phone industry. I could say that if one day, Apple stopped producing their product, I would sell my soul to the devil to trade for Apple continuation of their product." quoted Mrs. Ying.
+                      </p>
+                      <p>
+                        &emsp;After the interview with the Apple loyalist, we continued our inteview with the Anti-Apple group, John Doe, he's a Samsung fanboy. He said, "Samsung is far more better than the Apple ripped-off phone. Our technologies are far more superior and even cheaper. Any people with brain would have chosen Samsung phone over IPhone. They also steal our technology and act like a little child when we cut the deal with them. Final word to Apple, we hate you!".         
+                        <a
+                        data-toggle="collapse"
+                        href="#expandcontent5"
+                        role="button"
+                        id="readMore5"
+                        aria-expanded="false"
+                        aria-controls="expandcontent5"
+                        onclick="toggleReadMore('readMore5','dots5')"
+                      >
+                        [ hide ]
+                      </a>
+                      </p>
+                    </div>
+                  </p>
+                </div>
+  
+                <div>
+                  Tag:
+                  <button class="btn btn-primary btn-sm">Trending</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Pufa Content -->
+        <!-- this is for nav space-->
+        <div id="technology" class="py-5"></div>
+        <h2 class="header-font">Startup Technology</h2>
+
+        <div id="content4" class="card bg-white">
+          <div class="card-body row">
+            <div
+              class="col-sm-12 col-md-5 d-flex flex-column justify-content-between pt-4"
+            >
+              <img
+                src="https://i.redd.it/cx3opqq1t1o31.png"
+                alt="Tony Stonk image"
+                class="card-img rounded"
+                height="400"
+              />
+            </div>
+            <div
+              class="col-sm-12 col-md-7 d-flex flex-column justify-content-between p-4"
+            >
+              <div>
+                <h1 class="card-title header-title">I am IRONMAN</h1>
+                <h4 class="card-text font-weight-light">
+                    Mr. Widly Werywide
+                  </h4>
+                <p class="card-text">
+                  &emsp;Tony Stonk, the newbie programmer just said to the WORLD that
+                  he is "IRONMAN"
+                </p>
+                <p class="card-text">
+                  &emsp;Eveyone ask "What does IRONMAN mean?". Some people thinks it's
+                  mean his suit is made from iron and others thinks it's mean he is
+                  Cloths iron.<span id="dots4">...</span>
+                  <a
+                    data-toggle="collapse"
+                    href="#expandcontent4"
+                    role="button"
+                    id="readMore4"
+                    aria-expanded="false"
+                    aria-controls="expandcontent4"
+                    onclick="toggleReadMore('readMore4','dots4')"
+                  >
+                    continue reading
+                  </a>
+                </p>
+                <div class="collapse" id="expandcontent4">
+                  <p>
+                    &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac.
+                    Quam venenatis curabitur hendrerit quam turpis fringilla
+                    ultricies tortor est Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Semper amet nunc, consequat,
+                    amet sem. Vel venenatis diam eget eget egestas dolor.
+                  </p>
+                  <p>
+                    &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac.
+                    Quam venenatis curabitur hendrerit quam turpis fringilla
+                    ultricies tortor est Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Semper amet nunc, consequat,
+                    amet sem. Vel venenatis diam eget eget egestas dolor. Diam
+                    neque enim arcu, hac. Quam venenatis curabitur hendrerit
+                    quam turpis fringilla ultricies tortor est Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Semper amet
+                    nunc, consequat, amet sem. Vel venenatis diam eget eget
+                    egestas dolor. Diam neque enim arcu, hac. Quam venenatis
+                    curabitur hendrerit quam turpis fringilla ultricies tortor
+                    est              
+                    <a
+                    data-toggle="collapse"
+                    href="#expandcontent4"
+                    role="button"
+                    id="readMore4"
+                    aria-expanded="false"
+                    aria-controls="expandcontent4"
+                    onclick="toggleReadMore('readMore4','dots4')"
+                  >
+                    [ hide ]
+                  </a>
+                  </p>
+                </div>
+              </div>
+              <div>
+                Tag:
+                <button class="btn btn-primary btn-sm">Startup Technology</button>
+                <button class="btn btn-danger btn-sm">IRONMAN</button>
+                <button class="btn btn-success btn-sm">Tony Stonk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--Footer Card-->
+        <!-- <div>
+          <div class="card bg-dark text-white">
+            <img
+              class="card-img"
+              src="https://64.media.tumblr.com/15222973aa50936d310441655e1315f6/c9b10f2e8bf41bae-e4/s1280x1920/059ba18bc1a7fe944a0f719ea1246628d1e7c935.png"
+              alt="Card image"
+            />
+            <div class="card-img-overlay">
+              <h5 class="card-title">Mr. Pudinan Pensuk</h5>
+              <div class="d-flex justify-content-around">
+                <div class="col-4">
+                  <img
+                    class="card"
+                    width="75%"
+                    src="https://scontent.fbkk22-2.fna.fbcdn.net/v/t1.6435-9/118185323_3442044732530075_3879506421721647183_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H3eNmtJjZaUAX_tbTF3&_nc_ht=scontent.fbkk22-2.fna&oh=00_AT-ubj4oJa78U20PAU_WFVu9EtoHL1aRS7YttAunuYU_Eg&oe=621FE9E1"
+                    alt="Card image"
+                  />
+                </div>
+                <div>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                </div>
+              </div>
+              <p class="card-text mt-3">Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- this is for nav space-->
+        <div id="about" class="py-5"></div>
+        <section class="text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 section-about text-center">   
+                <h1 class="header-title">About</h1>
+                <div class="divider"></div>
+                <p>We are professional software developers strive to create the best technology contents for all kind of people.
+                    Our teams consist of 5 students currently working and studying at KMITL. 
+                    Our team is growing bigger and bigger each year and we're currently recruiting new members to the team.
+                    We hope to create the world where people who interest in technology could share their knowledge to the world.
+                </p>
+              </div>
+            </div>
+            <div class="row d-flex flex-wrap justify-content-center">
+              <div class="col-md-4">
+                <div class="service">
+                  <div class="service-img">
+                    <img class="about-img" src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.6435-9/76909617_1262191117320852_8957390321440784384_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFpi6YDo2H7yrricsP5SC934fsHZplYx_Xh-wdmmVjH9W1z89fbcqOhcZU04jtpzT6oazddkqQp4Yt-PvXzNu6W&_nc_ohc=eJq2cqAX3F4AX9stN6e&_nc_ht=scontent.fbkk5-5.fna&oh=00_AT_8DKoFJWSatZOEZinDo0rOKpalDbGK_KGJmCbT_c1Vtw&oe=62212874" alt="">
+
+                  </div>
+                  <h5 class="mt-3">Mr.Tanapol Wong-asa</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac. Quam
+                    venenatis curabitur hendrerit quam turpis fringilla ultricies</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service">
+                  <div class="service-img">
+                    <img class="about-img" src="https://avatars.githubusercontent.com/u/77424125?v=4" alt="">
+                  </div>
+                  <h5 class="mt-3">Mr.Pakorn Thanaprachanon</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac. Quam
+                    venenatis curabitur hendrerit quam turpis fringilla ultricies</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service">
+                  <div class="service-img">
+                    <img class="about-img" src="https://avatars.githubusercontent.com/u/63010510?v=4" alt="">
+                  </div>
+                  <h5 class="mt-3">Mr.Pufa Chantarapatana</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac. Quam
+                    venenatis curabitur hendrerit quam turpis fringilla ultricies</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service">
+                  <div class="service-img">
+                    <img class="about-img" src="https://media-exp1.licdn.com/dms/image/C4D03AQEX_K8oOoV7GA/profile-displayphoto-shrink_800_800/0/1635264767700?e=1649289600&v=beta&t=bzKMFTCImIj_X9r7CDIxjNPuWIWO0MgRyJf_GGv-19g" alt="">
+                  </div>
+                  <h5 class="mt-3">Mr.Pudinan Pensuk</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac. Quam
+                    venenatis curabitur hendrerit quam turpis fringilla ultricies</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service">
+                  <div class="service-img">
+                    <img class="about-img" src="https://media-exp1.licdn.com/dms/image/C4E03AQFo31FpEgQeBw/profile-displayphoto-shrink_800_800/0/1636990443345?e=1649289600&v=beta&t=I1uwJDhE54WDhUs65QB4JALj5DdjUZRc5W5_0jBQOsY" alt="">
+                  </div>
+                  <h5 class="mt-3">Mr.Sirawit Sukwattanavit</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Semper amet nunc, consequat, amet sem. Vel venenatis
+                    diam eget eget egestas dolor. Diam neque enim arcu, hac. Quam
+                    venenatis curabitur hendrerit quam turpis fringilla ultricies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subscribe Modal -->
+        <div
+          class="modal fade"
+          id="subscribeModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="subscribeModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Subscribe to our newsletter 
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  id="modalCloseButton"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!--Newsletter form-->
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="form-label d-inline col-md-2" for="email"
+                      >Email</label
+                    >
+                    <input
+                      class="form-control d-inline col-md-10"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="youremail@mail.com"
+                      required
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button class="btn btn-primary" id="submitButton" type="submit" onclick="onSubmit(event)">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img
+                class="mb-2 rounded-circle"
+                src="https://www.print3dd.com/wp-content/uploads/2016/09/kmitl-logoThai-1.png"
+                alt=""
+                width="50"
+                height="50"
+              />
+              <small class="d-block mb-3 text-muted">&copy; 2022</small>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li>
+                  <a class="text-muted" href="https://getbootstrap.com/"
+                    >Bootstrap</a
+                  >
+                </li>
+                <li>
+                  <a class="text-muted" href="https://www.w3schools.com/html/"
+                    >HTML</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <h5>Developers</h5>
+              <ul class="list-unstyled text-small">
+                <li>
+                  <a class="text-muted" href="https://github.com/ApexTone"
+                    >ApexTone</a
+                  >
+                </li>
+                <li>
+                  <a class="text-muted" href="https://github.com/T-Pakorn"
+                    >TStryker</a
+                  >
+                </li>
+                <li>
+                  <a class="text-muted" href="https://github.com/gutpdn"
+                    >Gutsoo</a
+                  >
+                </li>
+                <li>
+                  <a class="text-muted" href="https://github.com/pufask137"
+                    >PufaCH</a
+                  >
+                </li>
+                <li>
+                  <a class="text-muted" href="https://github.com/sirawit-suk"
+                    >$!r.Sirawit!</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      
+    </div>
+    <!-- Script Begin -->
+    <script type="text/javascript">
+      var nav = document.querySelector("nav");
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("bg-dark", "shadow");
+        } else {
+          nav.classList.remove("bg-dark", "shadow");
+        }
+      });
+
+      function onSubmit(e) {
+        let email = document.getElementById('email');
+        alert(`Subsciption email has been sent to ${email.value}.\nPlease verify your email to finish the subscription process.
+        `);
+        email.value = "";
+        document.getElementById('modalCloseButton').click();
+      };
+
+      function toggleReadMore(readMoreId,dotsSpanId){
+          let readMore = document.getElementById(readMoreId);
+          let dots = document.getElementById(dotsSpanId);
+          if(readMore.style.display === "none"){
+              readMore.style.display='inline';
+              dots.style.display = 'inline';
+          }
+          else{
+            readMore.style.display='none';
+            dots.style.display = 'none';
+          }
+      }
+    </script>
+    <!-- Script End -->
+    <!--Import required javascript for bootstrap-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
