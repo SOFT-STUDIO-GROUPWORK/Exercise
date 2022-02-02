@@ -9,3 +9,5 @@
 
 ### Exercises
 - 01 Basic HTML
+- 02 Basic CSS
+- 03 Bootstrap CSS
