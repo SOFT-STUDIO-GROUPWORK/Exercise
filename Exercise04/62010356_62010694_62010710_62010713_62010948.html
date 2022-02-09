@@ -54,10 +54,6 @@
       // changing button text color
       const buttonStyles = [
         {
-          backgroundColor: "",
-          color: "",
-        },
-        {
           backgroundColor: "red",
           color: "white",
         },
@@ -77,13 +73,17 @@
           backgroundColor: "white",
           color: "red",
         },
+        {
+          backgroundColor: "",
+          color: "",
+        },
       ];
-      let buttonStyleIndex = 1;
+      let buttonStyleIndex = 0;
       let showDateTime = false;
       dateButton.addEventListener("click", () => {
         if (!showDateTime) {
           showDateTime = true;
-          dateButton.innerText = new Date();
+          dateButton.textContent = new Date();
         }
         dateButton.style.backgroundColor =
           buttonStyles[buttonStyleIndex].backgroundColor;
@@ -97,8 +97,8 @@
         memberHeader.style.color = "blue";
       });
       memberHeader.addEventListener("mouseleave", () => {
-        memberHeader.style.backgroundColor = "white";
-        memberHeader.style.color = "pink";
+        memberHeader.style.backgroundColor = "";
+        memberHeader.style.color = "";
       });
 
       //toggle member display
@@ -129,37 +129,36 @@
       const picObjects = [
         {
           textContent: "Fireworks",
-          value:
+          imgSrc:
             "https://baywalkresidencepattaya.com/wp-content/uploads/2021/10/241293892_394510108911058_7226787241961502114_n.jpg",
         },
         {
           textContent: "Crest",
-          value:
+          imgSrc:
             "https://image.freepik.com/free-vector/heraldry-lion-design-template-luxury-crest-logo_476121-21.jpg",
         },
         {
           textContent: "Action",
-          value:
+          imgSrc:
             "https://penguinppc64.org/wp-content/uploads/2020/06/Action-Movies-img.jpg",
         },
         {
           textContent: "Buffalo",
-          value:
+          imgSrc:
             "https://i.natgeofe.com/n/de7be89d-3715-4e89-b83b-ab697ef781b8/thumbnail-cape-buffalo-nationalgeographic_1976203.jpg",
         },
       ];
       picObjects.map((obj, index) => {
         const listItem = document.createElement("li");
         const innerATag = document.createElement("a");
-        innerATag.textContent = obj.textContent;
         listItem.appendChild(innerATag);
 
-        listItem.setAttribute("value", obj.value);
-        listItem.setAttribute("id", `pic${index}`);
-        listItem.onclick = () => {
-          myImage.setAttribute("src", listItem.getAttribute("value"));
-          myImage.setAttribute("alt", innerATag.textContent);
-        };
+        innerATag.textContent = obj.textContent;
+        innerATag.setAttribute("id", `pic${index}`);
+        innerATag.addEventListener("click", () => {
+          myImage.setAttribute("src", obj.imgSrc);
+          myImage.setAttribute("alt", obj.textContent);
+        });
         picList.appendChild(listItem);
       });
     </script>
