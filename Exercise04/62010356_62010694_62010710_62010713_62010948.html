@@ -27,6 +27,7 @@
       }
     </style>
   </head>
+
   <body>
     <h2>My First JavaScript</h2>
     <button id="date-button">Click me to display Date and Time</button>
@@ -39,7 +40,7 @@
 
     <img
       id="my-image"
-      src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"
+      src="https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg"
       alt="default image"
     />
 
@@ -80,13 +81,16 @@
       ];
       let buttonStyleIndex = 0;
       let showDateTime = false;
+
+      //same as 
+      //dateButton.onclick = () => {};
       dateButton.addEventListener("click", () => {
+        // initial Date Time only once
         if (!showDateTime) {
           showDateTime = true;
           dateButton.textContent = new Date();
         }
-        dateButton.style.backgroundColor =
-          buttonStyles[buttonStyleIndex].backgroundColor;
+        dateButton.style.backgroundColor = buttonStyles[buttonStyleIndex].backgroundColor;
         dateButton.style.color = buttonStyles[buttonStyleIndex].color;
         buttonStyleIndex = (buttonStyleIndex + 1) % buttonStyles.length;
       });
@@ -112,10 +116,12 @@
       let showMember = false;
       memberHeader.addEventListener("click", () => {
         if (showMember) {
+          // delete all members
           while (memberList.lastChild) {
             memberList.removeChild(memberList.lastChild);
           }
         } else {
+          // add all list each members
           members.forEach((member) => {
             const memberListItem = document.createElement("li");
             memberListItem.textContent = member;
@@ -128,37 +134,47 @@
       //generate image choice list
       const picObjects = [
         {
-          textContent: "Fireworks",
-          imgSrc:
-            "https://baywalkresidencepattaya.com/wp-content/uploads/2021/10/241293892_394510108911058_7226787241961502114_n.jpg",
+          alt: "Mini Fireworks",
+          src:
+            "https://c.tenor.com/8pKynE0mjfAAAAAd/yoimiya-firework-idle-animation-by-tatsuto-genshin-impact.gif",
         },
         {
-          textContent: "Crest",
-          imgSrc:
-            "https://image.freepik.com/free-vector/heraldry-lion-design-template-luxury-crest-logo_476121-21.jpg",
+          alt: "Cute girl",
+          src:
+            "https://c.tenor.com/SD18fSwSsRgAAAAC/cute-anime.gif",
         },
         {
-          textContent: "Action",
-          imgSrc:
-            "https://penguinppc64.org/wp-content/uploads/2020/06/Action-Movies-img.jpg",
+          alt: "John wick",
+          src:
+            "https://c.tenor.com/wZnE0pxN5l0AAAAM/john-wick.gif",
         },
         {
-          textContent: "Buffalo",
-          imgSrc:
-            "https://i.natgeofe.com/n/de7be89d-3715-4e89-b83b-ab697ef781b8/thumbnail-cape-buffalo-nationalgeographic_1976203.jpg",
+          alt: "Buffalo",
+          src:
+            "https://pbs.twimg.com/media/EQVD0ygVUAEx2GJ.jpg",
         },
       ];
+
+      // similar to foreach but have an index
       picObjects.map((obj, index) => {
+        // outer wrapper list tag
         const listItem = document.createElement("li");
+        // inner anchor tag
         const innerATag = document.createElement("a");
+        // add anchor tag to each list tag
         listItem.appendChild(innerATag);
 
-        innerATag.textContent = obj.textContent;
+        // give content text of every anchor tag
+        innerATag.textContent = obj.alt;
         innerATag.setAttribute("id", `pic${index}`);
+
+        // If click select anchor tag, it will set the image
         innerATag.addEventListener("click", () => {
-          myImage.setAttribute("src", obj.imgSrc);
-          myImage.setAttribute("alt", obj.textContent);
+          myImage.setAttribute("src", obj.src);
+          myImage.setAttribute("alt", obj.alt);
         });
+
+        // append all list tags to picList
         picList.appendChild(listItem);
       });
     </script>
