@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+    62010356 นายธนพล วงศ์อาษา
+    62010694 นายภากรณ์ ธนประชานนท์
+    62010710 นายภูดินันท์ เพ็ญสุข
+    62010713 นายภูฟ้า จันทรพัฒน์
+    62010948 นายสิรวิชญ์ สุขวัฒนาวิทย์
+    -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise04</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        color: pink;
+      }
+      button {
+        display: block;
+      }
+      #my-image {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My First JavaScript</h2>
+    <button id="date-button">Click me to display Date and Time</button>
+
+    <a id="members-header">Members</a
+    <ul id="member-list"></ul>
+
+    <h1>Snapshots</h1>
+    <ul id="pic-list"></ul>
+
+    <img
+      id="my-image"
+      src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"
+      alt="default image"
+    />
+
+    <script>
+      //getting DOM elements
+      const dateButton = document.getElementById("date-button");
+      const memberHeader = document.getElementById("members-header");
+      const memberList = document.getElementById("member-list");
+      const picList = document.getElementById("pic-list");
+      const myImage = document.getElementById("my-image");
+
+      // changing button text color
+      const buttonStyles = [
+        {
+          backgroundColor: "",
+          color: "",
+        },
+        {
+          backgroundColor: "red",
+          color: "white",
+        },
+        {
+          backgroundColor: "green",
+          color: "white",
+        },
+        {
+          backgroundColor: "blue",
+          color: "yellow",
+        },
+        {
+          backgroundColor: "yellow",
+          color: "purple",
+        },
+        {
+          backgroundColor: "white",
+          color: "red",
+        },
+      ];
+      let buttonStyleIndex = 1;
+      let showDateTime = false;
+      dateButton.addEventListener("click", () => {
+        if (!showDateTime) {
+          showDateTime = true;
+          dateButton.innerText = new Date();
+        }
+        dateButton.style.backgroundColor =
+          buttonStyles[buttonStyleIndex].backgroundColor;
+        dateButton.style.color = buttonStyles[buttonStyleIndex].color;
+        buttonStyleIndex = (buttonStyleIndex + 1) % buttonStyles.length;
+      });
+
+      //styling ':hover' with js
+      memberHeader.addEventListener("mouseenter", () => {
+        memberHeader.style.backgroundColor = "yellow";
+        memberHeader.style.color = "blue";
+      });
+      memberHeader.addEventListener("mouseleave", () => {
+        memberHeader.style.backgroundColor = "white";
+        memberHeader.style.color = "pink";
+      });
+
+      //toggle member display
+      const members = [
+        "นายธนพล วงศ์อาษา, ID: 62010356",
+        "นายภากรณ์ ธนประชานนท์, ID: 62010694",
+        "นายภูดินันท์ เพ็ญสุข, ID: 62010710",
+        "นายภูฟ้า จันทรพัฒน์, ID: 62010713",
+        "นายสิรวิชญ์ สุขวัฒนาวิทย์, ID: 62010948",
+      ];
+      let showMember = false;
+      memberHeader.addEventListener("click", () => {
+        if (showMember) {
+          while (memberList.lastChild) {
+            memberList.removeChild(memberList.lastChild);
+          }
+        } else {
+          members.forEach((member) => {
+            const memberListItem = document.createElement("li");
+            memberListItem.textContent = member;
+            memberList.appendChild(memberListItem);
+          });
+        }
+        showMember = !showMember;
+      });
+
+      //generate image choice list
+      const picObjects = [
+        {
+          textContent: "Fireworks",
+          value:
+            "https://baywalkresidencepattaya.com/wp-content/uploads/2021/10/241293892_394510108911058_7226787241961502114_n.jpg",
+        },
+        {
+          textContent: "Crest",
+          value:
+            "https://image.freepik.com/free-vector/heraldry-lion-design-template-luxury-crest-logo_476121-21.jpg",
+        },
+        {
+          textContent: "Action",
+          value:
+            "https://penguinppc64.org/wp-content/uploads/2020/06/Action-Movies-img.jpg",
+        },
+        {
+          textContent: "Buffalo",
+          value:
+            "https://i.natgeofe.com/n/de7be89d-3715-4e89-b83b-ab697ef781b8/thumbnail-cape-buffalo-nationalgeographic_1976203.jpg",
+        },
+      ];
+      picObjects.map((obj, index) => {
+        const listItem = document.createElement("li");
+        const innerATag = document.createElement("a");
+        innerATag.textContent = obj.textContent;
+        listItem.appendChild(innerATag);
+
+        listItem.setAttribute("value", obj.value);
+        listItem.setAttribute("id", `pic${index}`);
+        listItem.onclick = () => {
+          myImage.setAttribute("src", listItem.getAttribute("value"));
+          myImage.setAttribute("alt", innerATag.textContent);
+        };
+        picList.appendChild(listItem);
+      });
+    </script>
+  </body>
+</html>
