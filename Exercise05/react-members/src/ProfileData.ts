@@ -1,8 +1,8 @@
 class ProfileData {
-    name!: string;
-    id!: string;
-    description!: string;
-    imageUrl!: string;
+    name?: string;
+    id?: string;
+    description?: string;
+    imageUrl?: string;
 }
 
 // add your data here

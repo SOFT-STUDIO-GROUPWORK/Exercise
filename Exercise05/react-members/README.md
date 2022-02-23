@@ -1,3 +1,11 @@
+# Software studio exercise05
+1. npm install
+2. npm start
+3. open [http://localhost:3000](http://localhost:3000)
+4. done, you should see our 5 men handsome faces there.
+5. noted. we create responsive design too :), try it!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
