@@ -33,8 +33,8 @@ const PROFILE_DATA: ProfileData[] = [
     name: "Pufa Chantarapatana",
     id: "62010713",
     description:
-      `Hi, I'm Pufa. I'm currently a Computer Engineering student at KMITL in year 3. 
-      My quote is Never gonna give you up Never gonna let you down Never 
+      `Hi, I'm Pufa. I'm currently a Computer Engineering student at KMITL in year 3.
+      My quote is Never gonna give you up Never gonna let you down Never
       gonna run around and desert you Never gonna make you cry Never
       gonna say goodbye Never gonna tell a lie and hurt you`,
     imageUrl: "https://avatars.githubusercontent.com/u/63010510?v=4",
@@ -43,7 +43,7 @@ const PROFILE_DATA: ProfileData[] = [
     name: "Sirawit Sukwattanavit",
     id: "62010948",
     description:
-      "Hi guy! I'm Pop, Nice to meet ya! I'm computer engineering studying for 3 years now. I have passionate in Frontend development and Backend development for web application. I like how to create a beautiful web application and make it real use to all who need it. By the way, user experience and user interface design is very important to know too and I love it!",
+      "Hi guy! I'm Pop, Nice to meet ya! I'm computer engineering studying for 3 years now. I have passionate in Frontend development and Backend development for web application. I like how to create a beautiful web application and make it a real use to all who need it. By the way, user experience and user interface design is very important to know too. That's all I want to say for now!",
     imageUrl:
       "https://media-exp1.licdn.com/dms/image/C4E03AQFo31FpEgQeBw/profile-displayphoto-shrink_800_800/0/1636990443345?e=1649289600&v=beta&t=I1uwJDhE54WDhUs65QB4JALj5DdjUZRc5W5_0jBQOsY",
   },

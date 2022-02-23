@@ -22,19 +22,19 @@ const Counter: React.FC = () => {
     else return count.toString();
   };
 
-  const getButtonStyle = (color: string): string => {
-    return `bg-${color}-500 hover:bg-${color}-600 text-white font-bold py-2 px-4 rounded m-0 w-fit border-b-4 border-${color}-700 active:border-b-0`;
+  const getButtonStyle = (className: string): string => {
+    return `${className} text-white font-bold py-2 px-4 rounded m-0 w-fit border-b-4 active:border-b-0`;
   };
 
   return (
     <div className='flex flex-row justify-items-center'>
-      <button className={getButtonStyle("green")} onClick={handleIncrease}>
+      <button className={getButtonStyle("bg-green-500 hover:bg-green-600 border-green-700")} onClick={handleIncrease}>
         Click to Vote
       </button>
       <button className='bg-gray-50 cursor-default mx-4 rounded-xl text-lg p-3 border-green-900 border-2 font-bold w-full max-w-[20%]'>
         {displayCount()}
       </button>
-      <button className={getButtonStyle("red")} onClick={handleDecrease}>
+      <button className={getButtonStyle("bg-red-500 hover:bg-red-600 border-red-700")} onClick={handleDecrease}>
         Click to Unvote
       </button>
     </div>

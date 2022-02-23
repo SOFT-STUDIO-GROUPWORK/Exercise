@@ -6,8 +6,8 @@ const App: React.FC = () => {
   return (
     <>
       <div className='flex flex-col items-center w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
-        <h1 className='text-4xl text-white p-6'>Group's Members</h1>
-        <div className='flex flex-col w-8/12'>
+        <h1 className='text-4xl text-center text-white p-6'>Group's Members</h1>
+        <div className='flex flex-col w-11/12 sm:w-10/12 2xl:w-8/12'>
           {PROFILE_DATA.map((profile) => (
             <ProfileCard
               key={profile.id}
