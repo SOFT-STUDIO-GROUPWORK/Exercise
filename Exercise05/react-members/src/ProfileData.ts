@@ -18,20 +18,7 @@ const PROFILE_DATA: ProfileData[] = [
   {
     name: "Pakorn Thanaprachanon",
     id: "62010694",
-    description:`
-      We're no strangers to love
-      You know the rules and so do I
-      A full commitment's what I'm thinking of
-      You wouldn't get this from any other guy
-      I just wanna tell you how I'm feeling
-      Gotta make you understand
-      Never gonna give you up
-      Never gonna let you down
-      Never gonna run around and desert you
-      Never gonna make you cry
-      Never gonna say goodbye
-      Never gonna tell a lie and hurt you
-      We've known each other for so long`,
+    description: "I am an aspiring data scientist who enjoys connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have strong technical skills and an academic background in engineering, statistics, and machine learning.",
     imageUrl: "https://avatars.githubusercontent.com/u/77424125?v=4",
   },
   {
@@ -46,9 +33,11 @@ const PROFILE_DATA: ProfileData[] = [
     name: "Pufa Chantarapatana",
     id: "62010713",
     description:
-      "London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.",
-    imageUrl: 
-      "https://avatars.githubusercontent.com/u/63010510?v=4",
+      `Hi, I'm Pufa. I'm currently a Computer Engineering student at KMITL in year 3. 
+      My quote is Never gonna give you up Never gonna let you down Never 
+      gonna run around and desert you Never gonna make you cry Never
+      gonna say goodbye Never gonna tell a lie and hurt you`,
+    imageUrl: "https://avatars.githubusercontent.com/u/63010510?v=4",
   },
   {
     name: "Sirawit Sukwattanavit",
