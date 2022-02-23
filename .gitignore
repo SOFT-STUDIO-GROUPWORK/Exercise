@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Exercise05/react-members/node_modules
+/Exercise05/react-members/.pnp
+/Exercise05/react-members/.pnp.js
+
+# testing
+/Exercise05/react-members//coverage
+
+# production
+/Exercise05/react-members//build
+
+# misc
+/Exercise05/react-members/.DS_Store
+/Exercise05/react-members/.env.local
+/Exercise05/react-members/.env.development.local
+/Exercise05/react-members/.env.test.local
+/Exercise05/react-members/.env.production.local
+
+/Exercise05/react-members/npm-debug.log*
+/Exercise05/react-members/yarn-debug.log*
+/Exercise05/react-members/yarn-error.log*
